@@ -1,6 +1,6 @@
-#define _CRT_SECURE_NO_WARNINGS
+ï»¿#define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
-//ÇÔ¼ö
+//í•¨ìˆ˜
 
 /*
 void GuGu(void);
@@ -48,7 +48,7 @@ void print_char(char ch, int count)
 	}
 	return;
 }
-/* ¹«ÇÑ
+/* ë¬´í•œ
 void fruit(void)
 {
 	printf("apple\n");
@@ -72,7 +72,7 @@ void fruit(int a)
 * int prime_number(int n);
 void main()
 {
-	printf("2 ÀÌ»óÀÇ Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+	printf("2 ì´ìƒì˜ ì •ìˆ˜ë¥¼ ìž…ë ¥í•˜ì„¸ìš” : ");
 	int n;
 	scanf("%d",&n);
 	int k=5;
@@ -107,7 +107,7 @@ int prime_number(int n)
 * void prime_number(int n);
 void main()
 {
-	printf("2 ÀÌ»óÀÇ Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+	printf("2 ì´ìƒì˜ ì •ìˆ˜ë¥¼ ìž…ë ¥í•˜ì„¸ìš” : ");
 	int n;
 	scanf("%d",&n);
 	int k=5;
@@ -138,7 +138,7 @@ void prime_number(int n)
 
 
 /*
-* ´ÙÀ½ ½ÄÀ» ¸¸Á·ÇÏ´Â ¸ðµç A ¿Í Z¸¦ ±¸ÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ¶ó
+* ë‹¤ìŒ ì‹ì„ ë§Œì¡±í•˜ëŠ” ëª¨ë“  A ì™€ Zë¥¼ êµ¬í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ë¼
 *
 *   A Z
 *+  Z A
@@ -146,7 +146,7 @@ void prime_number(int n)
 *   9 9
 */
 
-/*206 µµÀü ½ÇÀü ¿¹Á¦ Àç±Í È£Ãâ ÀÌ¿ëÇØ¼­
+/*206 ë„ì „ ì‹¤ì „ ì˜ˆì œ ìž¬ê·€ í˜¸ì¶œ ì´ìš©í•´ì„œ
 * 
 int rec_func(int n);
 int main()
@@ -172,11 +172,11 @@ int rec_func(int n)
 * 
 */
 /*
-* ÀÔ·Â¹Þ´Â °ªÀÇ Àý´ë°ªÀ» ¼öÇÏ´Â ÇÔ¼ö abs() ¸¦ ±¸ÇöÇÏ¶ó.
+* ìž…ë ¥ë°›ëŠ” ê°’ì˜ ì ˆëŒ€ê°’ì„ ìˆ˜í•˜ëŠ” í•¨ìˆ˜ abs() ë¥¼ êµ¬í˜„í•˜ë¼.
 * ex>
-* Á¾·áÇÏ·Á¸é 0À» ÀÔ·ÂÇÏ½Ã¿À.
-* Á¤¼ö ÀÔ·Â(Á¾·á-0) : -34
-* Àý´ë°ªÀº : 34
+* ì¢…ë£Œí•˜ë ¤ë©´ 0ì„ ìž…ë ¥í•˜ì‹œì˜¤.
+* ì •ìˆ˜ ìž…ë ¥(ì¢…ë£Œ-0) : -34
+* ì ˆëŒ€ê°’ì€ : 34
 */
 /*
 * 
@@ -184,10 +184,10 @@ int abs(int n);
 int main()
 {
 	int n=1;
-	printf("Á¾·áÇÏ·Á¸é 0À» ÀÔ·ÁÇÏ½Ã¿À.\n");
+	printf("ì¢…ë£Œí•˜ë ¤ë©´ 0ì„ ìž…ë ¤í•˜ì‹œì˜¤.\n");
 	while (n != 0)
 	{
-		printf("Á¤¼ö ÀÔ·Â(Á¾·á-0) : ");
+		printf("ì •ìˆ˜ ìž…ë ¥(ì¢…ë£Œ-0) : ");
 		scanf("%d", &n);
 		abs(n);
 	}
@@ -198,25 +198,25 @@ int abs(int n)
 {
 	if (n < 0)
 	{
-		printf("Àý´ë°ªÀº : %d\n", n *= -1);
+		printf("ì ˆëŒ€ê°’ì€ : %d\n", n *= -1);
 		return n *= -1;
 	}
 	else
 	{
-		printf("Àý´ë°ªÀº : %d\n", n);
+		printf("ì ˆëŒ€ê°’ì€ : %d\n", n);
 		return n;
 	}
 }
 */
 /*
-* ´ÞÆØÀÌ ÇÑ¸¶¸®°¡  ÇÑ´ÞÀÌ Áö³ª¸é ¾î¸¥ÀÌ µÇ°í
-* ´Ù½Ã ÇÑ´ÞÀÌ Áö³ª¸é »õ³¢¸¦ ³º´Â´Ù.
-* »õ·Î ÅÂ¾î³­ ´ÞÆØÀÌ ¿ª½Ã ÇÑ´ÞÀÌ Áö³ª¸é
-* ¾î¸¥ÀÌ µÇ°í , ´Ù½Ã ÇÑ´Þ ÈÄ ºÎÅÍ »õ³¢¸¦ ³º´Â´Ù°í ÇÒ¶§
-* ´ÞÆØÀÌ°¡ ¸Å´Þ »õ³¢¸¦ ³ºÀ¸¸é 1³âÈÄ ÀüÃ¼ ´ÞÆØÀÌÀÇ ¼ö´Â
-* ¾ó¸¶ÀÎÁö ¾Ë¼ö ÀÖµµ·Ï ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ¶ó.
-* (´Ü, °¡Á¤ 1 ´ÞÆØÀÌ´Â ÀÚ¿õµ¿Ã¼ÀÌ´Ù.
-*      °¡Á¤ 2 ´ÞÆØÀÌ°¡  1³â¸¸¿¡ Á×À»¸® ¾ø´Ù.)
+* ë‹¬íŒ½ì´ í•œë§ˆë¦¬ê°€  í•œë‹¬ì´ ì§€ë‚˜ë©´ ì–´ë¥¸ì´ ë˜ê³ 
+* ë‹¤ì‹œ í•œë‹¬ì´ ì§€ë‚˜ë©´ ìƒˆë¼ë¥¼ ë‚³ëŠ”ë‹¤.
+* ìƒˆë¡œ íƒœì–´ë‚œ ë‹¬íŒ½ì´ ì—­ì‹œ í•œë‹¬ì´ ì§€ë‚˜ë©´
+* ì–´ë¥¸ì´ ë˜ê³  , ë‹¤ì‹œ í•œë‹¬ í›„ ë¶€í„° ìƒˆë¼ë¥¼ ë‚³ëŠ”ë‹¤ê³  í• ë•Œ
+* ë‹¬íŒ½ì´ê°€ ë§¤ë‹¬ ìƒˆë¼ë¥¼ ë‚³ìœ¼ë©´ 1ë…„í›„ ì „ì²´ ë‹¬íŒ½ì´ì˜ ìˆ˜ëŠ”
+* ì–¼ë§ˆì¸ì§€ ì•Œìˆ˜ ìžˆë„ë¡ í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ë¼.
+* (ë‹¨, ê°€ì • 1 ë‹¬íŒ½ì´ëŠ” ìžì›…ë™ì²´ì´ë‹¤.
+*      ê°€ì • 2 ë‹¬íŒ½ì´ê°€  1ë…„ë§Œì— ì£½ì„ë¦¬ ì—†ë‹¤.)
 */
 
 /*
@@ -226,7 +226,7 @@ int main()
 {
 	for (int i = 0; i < 13; i++)
 	{
-		printf("%d°³¿ù: %d¸¶¸®\n",i, snail_create(i));
+		printf("%dê°œì›”: %dë§ˆë¦¬\n",i, snail_create(i));
 	}
 	return 0;
 }
@@ -246,12 +246,78 @@ int snail_create(int n)
 */
 
 /*
-* »çÄ¢¿¬»êÀ» À§ÇÑ ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ¶ó.
-* Ãâ·ÂÇüÅÂ´Â ´ÙÀ½ ¿¹¿Í °°´Ù.
+* ì‚¬ì¹™ì—°ì‚°ì„ ìœ„í•œ í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ë¼.
+* ì¶œë ¥í˜•íƒœëŠ” ë‹¤ìŒ ì˜ˆì™€ ê°™ë‹¤.
 * ex >
-* ¿øÇÏ´Â ¿¬»êÀ» ¼±ÅÃÇÏ½Ã¿À.
-* (1:µ¡¼À, 2:»¬¼À, 3:°ö¼À, 4:³ª´°¼À, 0:Á¾·á)
+* ì›í•˜ëŠ” ì—°ì‚°ì„ ì„ íƒí•˜ì‹œì˜¤.
+* (1:ë§ì…ˆ, 2:ëº„ì…ˆ, 3:ê³±ì…ˆ, 4:ë‚˜ëˆ—ì…ˆ, 0:ì¢…ë£Œ)
 * 1
-* µÎ Á¤¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À. :
-* °á°ú´Â 00 ÀÔ´Ï´Ù.
+* ë‘ ì •ìˆ˜ë¥¼ ìž…ë ¥í•˜ì‹œì˜¤. :
+* ê²°ê³¼ëŠ” 00 ìž…ë‹ˆë‹¤.
+*/
+/*
+* 
+* #define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+int Plus(int a,int b);
+int Subtract(int a,int b);
+int Multiply(int a, int b);
+int Division(int a, int b);
+void printf_calculation(int n,int a,int b);
+void calculation(int n);
+int main()
+{
+	calculation(5);
+	return 0;
+}
+int Plus(int a, int b) { return a + b; }
+int Subtract(int a, int b) { return a - b; }
+int Multiply(int a, int b) { return a * b; }
+int Division(int a, int b) { return a / b; }
+void printf_calculation(int n,int a,int b) 
+{
+	switch (n)
+	{
+		case 1:
+		{
+			printf("\"ë§ì…ˆ\" ê²°ê³¼ëŠ” %d ìž…ë‹ˆë‹¤.\n", Plus(a, b));
+			break;
+		}
+		case 2:
+		{
+			printf("\"ëº„ì…ˆ\" ê²°ê³¼ëŠ” %d ìž…ë‹ˆë‹¤.\n", Subtract(a, b));
+			break;
+		}
+		case 3:
+		{
+			printf("\"ê³±ì…ˆ\" ê²°ê³¼ëŠ” %d ìž…ë‹ˆë‹¤.\n", Multiply(a, b));
+			break;
+		}
+		case 4:
+		{
+			printf("\"ë‚˜ëˆ—ì…ˆ\" ê²°ê³¼ëŠ” %d ìž…ë‹ˆë‹¤.\n", Division(a, b));
+			break;
+		}
+		default:
+			break;
+	}
+}
+void calculation(int n) 
+{
+	int a=0, b=0;
+	while (n!=0)
+	{
+		printf("ì›í•˜ëŠ” ì—°ì‚°ì„ ì„ íƒí•˜ì‹œì˜¤.\n(1:ë§ì…ˆ, 2 : ëº„ì…ˆ, 3 : ê³±ì…ˆ, 4 : ë‚˜ëˆ—ì…ˆ, 0 : ì¢…ë£Œ)\n");
+		scanf("%d", &n);
+		if (n>=1&&n < 5)
+		{
+			printf("ë‘ ì •ìˆ˜ë¥¼ ìž…ë ¥í•˜ì‹œì˜¤. :");
+			scanf("%d %d", &a, &b);
+			printf_calculation(n, a, b);
+		}
+		
+	}
+}
+â€‹
 */
