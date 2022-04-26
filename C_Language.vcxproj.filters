@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C_Language.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="ConsoleProj_3.c">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -31,6 +28,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ConsoleProj_7.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleProj_8.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="testProj.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

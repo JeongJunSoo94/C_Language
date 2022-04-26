@@ -135,6 +135,8 @@ void prime_number(int n)
 	}
 }
 */
+
+
 /*
 * 다음 식을 만족하는 모든 A 와 Z를 구하는 프로그램을 작성하라
 *
@@ -142,4 +144,67 @@ void prime_number(int n)
 *+  Z A
 * ------
 *   9 9
+*/
+
+/*206 도전 실전 예제 재귀 호출 이용해서
+* 
+int rec_func(int n);
+int main()
+{
+	int n;
+	scanf("%d", &n);
+	int sum=rec_func(n);
+	printf("%d",sum);
+	return 0;
+}
+
+int rec_func(int n)
+{
+	if (n == 1)
+	{
+		return 1;
+	}
+	else
+	{
+		return n + rec_func(n-1);
+	}
+}
+* 
+*/
+/*
+* 입력받는 값의 절대값을 수하는 함수 abs() 를 구현하라.
+* ex>
+* 종료하려면 0을 입력하시오.
+* 정수 입력(종료-0) : -34
+* 절대값은 : 34
+*/
+/*
+* 
+int abs(int n);
+int main()
+{
+	int n=1;
+	printf("종료하려면 0을 입려하시오.\n");
+	while (n != 0)
+	{
+		printf("정수 입력(종료-0) : ");
+		scanf("%d", &n);
+		abs(n);
+	}
+	return 0;
+}
+
+int abs(int n)
+{
+	if (n < 0)
+	{
+		printf("절대값은 : %d\n", n *= -1);
+		return n *= -1;
+	}
+	else
+	{
+		printf("절대값은 : %d\n", n);
+		return n;
+	}
+}11
 */
