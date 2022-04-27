@@ -1,7 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 #include<string.h>
-
+//배열
 int main()
 {
 	char str1[80];
@@ -191,4 +191,13 @@ int main()
 	}
 	return 0;
 }
+*/
+
+/*
+* 함수 호출 규약
+__cdecl        CDECLaration
+22 라인에서 cdeclFunction을 call 한 뒤, 23 라인에서 8바이트만큼의 스택을 재사용 할 수 있도록 스택 포인터에서 add 해 준다.
+main 함수(호출시킨 함수)에서 이런 정리를 해 주는 것을 cdecl 호출 방식이라고 한다.
+__stdcall
+__fastcall
 */
