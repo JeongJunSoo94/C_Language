@@ -39,5 +39,14 @@
     <ClCompile Include="ConsoleProj_9.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ConsoleProj_11.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleProj_12.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleProj13.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
