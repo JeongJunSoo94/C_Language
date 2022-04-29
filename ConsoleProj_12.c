@@ -356,35 +356,59 @@ int my_strcmp(char* pa, char* pb,int n)
 /*
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
-//cmp 사용안함 수정해야함
 
-// 문자열에서 문자개수 파악
-// 문자 개수만큼 문자들 비교
-// 문자 위치에 따라 순서정하기
-
-int compare(int a, int b)
+int my_strcmp(char* pa, char* pb)
 {
-    return a >= b ? a : b;
+    while ((*pa == *pb) && (*pa != '\0'))
+    {
+        pa++;
+        pb++;
+    }
+    if ((*pa < 'a' ? *pa + 'a' - 'A' : *pa) > (*pb < 'a' ? *pb + 'a' - 'A' : *pb)) return 1;
+    else if ((*pa < 'a' ? *pa + 'a' - 'A' : *pa) < (*pb < 'a' ? *pb + 'a' - 'A' : *pb)) return -1;
+    else return 0;
+}
+char* my_strcpy(char* pd, char* ps)
+{
+    char* po = pd;
+    while (*ps != '\0')
+    {
+        *pd = *ps;
+        pd++;
+        ps++;
+    }
+    *pd = '\0';
+    return po;
+}
+void sort(char* str1, char* str2, char* str3)
+{
+    char temp[256];
+    if (my_strcmp(str1, str2) > 0)
+    {
+        my_strcpy(temp, str1);
+        my_strcpy(str1, str2);
+        my_strcpy(str2, temp);
+    }
+    if (my_strcmp(str2, str3) > 0)
+    {
+        my_strcpy(temp, str2);
+        my_strcpy(str2, str3);
+        my_strcpy(str3, temp);
+    }
+    if (my_strcmp(str1, str3) > 0)
+    {
+        my_strcpy(temp, str1);
+        my_strcpy(str1, str3);
+        my_strcpy(str3, temp);
+    }
 }
 int main()
 {
-    char str[80] = {0};
-    int arr[10];
-    int cnt=0;
-    gets(str);
-    while (1)
-    {
-        for (int i = 0; i < strlen(str); i++)
-        {
-            if (*(str + i) == ' ')
-            {
-                cnt++;
-                arr[cnt] = i;
-            }
-        }
-        break;
-    }
-    printf("%s",str);
+    char str1[256], str2[256], str3[256];
+    printf("세 단어 입력 :");
+    scanf("%s %s %s", str1, str2, str3);
+    sort(str1, str2, str3);
+    printf("%s, %s, %s", str1, str2, str3);
     return 0;
 }
 

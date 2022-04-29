@@ -19,3 +19,4 @@ void test()
     static int staticint;//정적 지역 변수 초기화 한번만 발생함 초기화 안하면 자동으로 0으로 초기화됨 
     printf("called %d\n", staticint++);
 }
+
