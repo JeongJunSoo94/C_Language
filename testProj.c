@@ -1,32 +1,35 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 
-//malloc 사용했으면 free로 반환해줘야한다.
 int main()
 {
-    int* pi;
-    int size = 5;
-    int count = 0;
-    int num;
-    int i;
+    char temp[80];
+    char* str[3] = { 0 };
+    int i = 0,count=0;
 
-    pi = (int*)calloc(size, sizeof(int));
     while (1)
     {
-        printf("양수만 입력하세요 =>");
-        scanf("%d",&num);
-        if (num <= 0)break;
-        if (count == size)
+        printf("문자열을 입력하세요 :");
+        gets(temp);
+        if (strcmp(temp, "Quit") == 0)break;
+        str[i] = (char*)malloc(strlen(temp) + 1);
+        strcpy(str[i], temp);
+        if (count == i)
         {
-            size += 5;
-            pi = (int*)realloc(pi, size * sizeof(int));
+            str[i] = (char*)realloc(strlen(temp) + 1);
         }
-        pi[count++] = num;
+        if (i > 0)
+        {
+            strcat(str[i], str[i - 1]);
+        }
+
+        i++;
     }
-    for (i = 0; i < count; i++)
+
+    for (i = 0; str[i] != NULL; i++)
     {
-        printf("%5d",pi[i]);
+        free(str[i]);
     }
-    free(pi);
+
     return 0;
 }
