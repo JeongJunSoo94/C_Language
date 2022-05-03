@@ -446,3 +446,239 @@ int main()
 *    3 5 7
 *    4 8 9
 */
+/*
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+int main()
+{
+    int str[80] = { 0 };
+    int column = 0, row = 0;
+    printf("배열의 행과 열을 입력하시오:");
+    scanf("%d %d", &column, &row);
+    printf("배열에 들어갈 숫자를 %d만큼 입력하시오.\n", column * row);
+    int ch = 0;
+    int count = 0;
+    ch = getchar();
+    while (1)//입력
+    {
+        scanf("%d", &ch);
+        if (ch == ' ')
+        {
+
+        }
+        else if (ch >= 0 && ch <= 99)
+        {
+            str[count] = ch;
+            count++;
+        }
+        if (count == column * row)
+        {
+            break;
+        }
+    }
+    int i = 0, j = 0, k = 0, index = 0;
+    int str1[40][40] = { 0 };
+    while (i <=row* column)
+    {
+
+        if (k % 2 == 0&&k< column-1)
+        {
+            str1[j][k] = str[index++];
+            k++;//오른쪽이동
+            i++;
+        }
+        else if (k== column-1)
+        {
+            str1[j][k] = str[index++];
+            j++;//아래이동
+            i++;
+        }
+        while ((k>0)&&(j<row-1))//대각선
+        {
+            str1[j][k] = str[index++];
+            j++;//아래이동
+            k--;//왼쪽이동
+            i++;
+        }
+        if (j<row-1)
+        {
+            str1[j][k] = str[index++];
+            j++;//아래이동
+            i++;
+        }
+        else if (j == row - 1)
+        {
+            str1[j][k] = str[index++];
+            k++;//오른쪽이동
+            i++;
+        }
+        while ((j > 0)&&(k< column - 1))//대각선
+        {
+            str1[j][k] = str[index++];
+            j--;//위이동
+            k++;//오른쪽이동
+            i++;
+        }
+    }
+    for (j = 0; j < row; j++)
+    {
+        for (int i = 0; i < column; i++)
+        {
+            printf("%3d", str1[j][i]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+*/
+/*야구게임
+* 세개의 숫자를 입력받아서..
+* 숫자가 있지만 그 위치가 틀렸을 때는 볼을 출력
+* 숫자와 위치가 맞으며 스트라이크를 출력
+* 숫자와 위치가 전부 틀리면 아웃을 축력하는
+* 프로그램을 작성하라.
+* 무엇이 볼이고 스트라이크 인지는 출력하지 않는다.
+* ex> 컴퓨터 2 1 6 <- 보여지면 안됨.
+* 1 > 8 3 5 => OUT
+* 2 > 6 5 9 => 0S 1B
+* 3 > 2 6 4 => 1S 1B
+* 4 > 2 1 6 => 정답
+* 
+* 헤더 Math.h
+* rand();사용
+*/
+/*
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<stdlib.h>
+#include <time.h>
+
+int main()
+{
+    int num,check=0, boll=0, strake=0;
+    int match_table[3] = {0};
+    int input_table[3] = {0};
+    srand(time(NULL));
+    for (int i = 0; i < 3;)//랜덤
+    {
+        num = rand()%10;
+        if (num == 0)continue;
+        for (int j = 0; j <= i;j++)
+        {
+            if (match_table[j] == num)
+            {
+                check += 1;
+            }
+        }
+        if (check==0)
+        {
+            match_table[i] = num;
+            i++;
+        }
+        check = 0;
+    }
+    printf("1~9까지 3번 입력하세요:");
+    while (1)
+    {
+        for (int i = 0; i < 3; i++)//입력
+        {
+            scanf("%d", &input_table[i]);
+        }
+        for (int i = 0; i < 3; i++)//비교
+        {
+            if (match_table[i] == input_table[i])
+            {
+                strake += 1;
+            }
+            else
+            {
+                for (int j = 0; j < 3; j++)//비교
+                {
+                    if (match_table[j] == input_table[i])
+                    {
+                        boll += 1;
+                    }
+                }
+            }
+        }
+        check++;
+        printf("%d > ", check);
+        for (int i = 0; i < 3; i++)//출력
+        {
+            printf("%d ", input_table[i]);
+        }
+        if (strake == 3)
+        {
+            printf("=> 정답");
+            break;
+        }
+        else if (strake > 0 || boll > 0)
+        {
+            printf("=> %dS %dB\n", strake, boll);
+        }
+        else
+        {
+            printf("=> OUT\n");
+        }
+        strake = 0, boll = 0;
+    }
+
+    for (int i = 0; i < 3;i++)//출력
+    {
+        printf("%d ", match_table[i]);
+    }
+    return 0;
+}
+
+*/
+
+/*
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+int main()
+{
+    char* pary[5];
+    int i;
+
+    pary[0] = "dog";
+    pary[1] = "elephant";
+    pary[2] = "horse";
+    pary[3] = "tiger";
+    pary[4] = "lion";
+
+    for (i = 0; i < 5; i++)
+    {
+        printf("%s\n", pary[i]);
+    }
+    return 0;
+}
+*/
+/*
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+int main()
+{
+    int ary1[4] = { 1,2,3,4 };
+    int ary2[4] = { 11,12,13,14 };
+    int ary3[4] = { 21,22,23,24 };
+    int *pary[3] = { ary1,ary2,ary3 };
+    int i, j;
+
+    for (i = 0; i < 3; i++)
+    {
+        for (j = 0; j < 4; j++)
+        {
+            printf("%5d", pary[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+*/
+/*
+ 이중포인터를 사용하는 이유는 이중포인터 **ppa에 *pa를 넣어주고 다른곳에서 *pa의 주소값 바꿔줘도 메모리누수가 발생하지 않는다.
+ */
