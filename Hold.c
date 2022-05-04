@@ -233,3 +233,97 @@ int main()
     return 0;
 }
 */
+
+/*
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+void print_str(char** ps)
+{
+    while (*ps != NULL)
+    {
+        printf("%s\n", *ps);
+        ps++;
+    }
+}
+
+int main()
+{
+    char temp[80];
+    int i = 0, size = 2;;
+
+    char**str = (char**)malloc(size * sizeof(char*));
+    while (1)
+    {
+        printf("문자열을 입력하세요 :");
+        gets(temp);
+        if (strcmp(temp, "Quit") == 0)break;
+
+        if (size == i)
+        {
+            size++;
+            *str = (char**)realloc(*str, sizeof(char*)* size);
+        }
+
+        str[i] = (char*)malloc(strlen(temp) + 1);
+        if (str[i] == NULL)//꼭해줘야함
+        {
+            printf("메모리가 부족합니다.\n");
+            exit(1);
+        }
+        strcpy(str[i], temp);
+
+        i++;
+    }
+    print_str(str);
+
+    for (i = 0; str[i] != NULL; i++)
+    {
+        free(str[i]);
+    }
+
+    return 0;
+}
+
+
+*/
+/*
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+int word_count(char* str)
+{
+    int count = 1;
+    for (int i = 0; str[i] == NULL; i++)
+    {
+        if (str[i] == ' ')
+        {
+            count++;
+        }
+    }
+    return count;
+}
+int main()
+{
+    char temp[80];
+    int i = 0, size = 2;;
+    int count;
+
+    char** str = (char**)malloc(size * sizeof(char*));
+    while (1)
+    {
+        printf("문자열을 입력하세요 :");
+        gets(temp);
+        count = word_count(temp);
+        *str = (char**)malloc(size * sizeof(char*));
+
+    }
+    print_str(str);
+
+    for (i = 0; str[i] != NULL; i++)
+    {
+        free(str[i]);
+    }
+
+    return 0;
+}
+
+*/

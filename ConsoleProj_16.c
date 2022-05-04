@@ -147,3 +147,5 @@ int main()
 * 입력 > I amd happy
 * 출력 > happy am I
 */
+
+//realloc을 시도했으면 할당 전에 저장하고 free로 할당을 풀어버림
