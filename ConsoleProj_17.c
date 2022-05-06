@@ -245,3 +245,20 @@ int main()
 *   1. 메모리 할당 사용, 자기 참조 구조체 활용, 입력/출력/검색은 각각
 *   개별 함수로 구현한다.
 */
+/* 메모리릭 발견
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<crtdbg.h>
+
+int main(int argc, char **argv)
+{
+    _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF || _CRTDBG_LEAK_CHECK_DF);
+
+    int* arr=NULL;
+    arr = (int*)malloc(sizeof(int)*4);
+
+    free(arr);
+    _CrtDumpMemoryLeaks();
+    return 0;
+}
+*/
